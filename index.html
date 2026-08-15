@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gabriela Dalila Contrera | Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <!-- ==============================
+         HEADER
+         ============================== -->
+
+    <header>
+        <nav>
+
+            <a href="#inicio">Dalila Contrera</a>
+
+            <ul>
+                <li>
+                    <a href="#sobremi">Sobre mí</a>
+                </li>
+
+                <li>
+                    <a href="#habilidades">Habilidades</a>
+                </li>
+
+                <li>
+                    <a href="#formacion">Formación</a>
+                </li>
+
+                <li>
+                    <a href="#contacto">Contacto</a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- ==============================
+         CONTENIDO PRINCIPAL
+         ============================== -->
+
+    <main>
+
+        <!-- ==============================
+             INICIO
+             ============================== -->
+
+        <section id="inicio">
+
+        <div class="inicio-contenido">
+
+            <h1>Gabriela Dalila Contrera</h1>
+
+            <h2>Estudiante de Desarrollo de Software</h2>
+
+            <p class="inicio-descripcion">
+                Me interesa el desarrollo web, la programación y las nuevas
+                tecnologías. Actualmente continúo mi formación en el IFTS 29
+                y desarrollo mis conocimientos a través de proyectos y
+                práctica constante.
+            </p>
+
+            <div class="inicio-botones">
+
+                <a
+                    href="https://github.com/DalilaContrera"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="boton-principal"
+                >
+                    Ver mi GitHub →
+                </a>
+
+                <a
+                    href="#contacto"
+                    class="boton-secundario"
+                >
+                    Contactarme
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="inicio-foto">
+
+            <img
+                src="assets/mifoto.jpg"
+                alt="Foto de Gabriela Dalila Contrera"
+            >
+
+        </div>
+
+</section>
+
+
+        <!-- ==============================
+             SOBRE MÍ
+             ============================== -->
+
+        <section id="sobremi">
+
+            <h2>Sobre mí</h2>
+
+            <p>
+                Soy Gabriela Dalila Contrera, de Córdoba, Argentina.
+                Siempre me sentí atraída por la tecnología y la programación.
+                A lo largo del tiempo fui incorporando conocimientos a través
+                de diferentes cursos y experiencias de formación.
+            </p>
+
+            <p>
+                Actualmente curso la Tecnicatura Superior en Desarrollo de
+                Software a distancia en el IFTS 29. Me interesa seguir
+                creciendo en el área de programación, desarrollo web y
+                nuevas tecnologías.
+            </p>
+
+        </section>
+
+
+        <!-- ==============================
+             HABILIDADES
+             ============================== -->
+
+        <section id="habilidades">
+
+            <h2>Habilidades</h2>
+
+            <div class="habilidades-grid">
+
+                <div>HTML</div>
+
+                <div>CSS</div>
+
+                <div>JavaScript</div>
+
+                <div>C#</div>
+
+                <div>Kotlin</div>
+
+                <div>SQL</div>
+
+                <div>MySQL</div>
+
+                <div>Git</div>
+
+                <div>GitHub</div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             FORMACIÓN
+             ============================== -->
+
+        <section id="formacion">
+
+            <h2>Formación</h2>
+
+            <ul>
+
+                <li>
+                    <strong>Tecnicatura Superior en Desarrollo de Software</strong>
+                    — IFTS 29 · En curso
+                </li>
+
+                <li>
+                    <strong>Diplomatura en Nuevas Tecnologías</strong>
+                    — SEU / UTN Córdoba · 2020–2021
+                </li>
+
+                <li>
+                    <strong>Argentina Programa</strong>
+                    — Primera y segunda etapa · 2022–2023
+                </li>
+
+                <li>
+                    <strong>Programación Básica</strong>
+                    — TecnoFem / Gobierno de Córdoba · 2022
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- ==============================
+             CONTACTO
+             ============================== -->
+
+        <section id="contacto">
+
+            <h2>Contacto</h2>
+
+            <p>
+                ¿Querés ponerte en contacto conmigo?
+                Podés escribirme a través del siguiente formulario.
+            </p>
+
+
+            <form>
+
+                <div class="campo">
+
+                    <label for="nombre">
+                        Nombre
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Tu nombre"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="tuemail@ejemplo.com"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="mensaje">
+                        Mensaje
+                    </label>
+
+                    <textarea
+                        id="mensaje"
+                        name="mensaje"
+                        rows="6"
+                        placeholder="Escribí tu mensaje..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button type="submit">
+                    Enviar mensaje
+                </button>
+
+            </form>
+
+
+            <div class="contacto-github">
+
+                <p>
+                    También podés conocer mis proyectos en:
+                </p>
+
+                <a
+                    href="https://github.com/DalilaContrera"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    GitHub →
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==============================
+         FOOTER
+         ============================== -->
+
+    <footer>
+
+        <p>
+            Gabriela Dalila Contrera · 2026
+        </p>
+
+        <a
+            href="https://github.com/DalilaContrera"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visitar mi perfil de GitHub"
+        >
+            GitHub
+        </a>
+
+    </footer>
+
+</body>
+
+</html>

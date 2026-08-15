@@ -1,0 +1,869 @@
+/* ========================================
+   VARIABLES DE COLOR
+   ======================================== */
+
+:root {
+    --bg: #12141c;
+    --bg-alt: #1a1d29;
+    --bg-card: #20232f;
+    --bg-header: #0c0d13;
+
+    --text: #f4f1ea;
+    --text-secondary: #9a9fb0;
+
+    --accent: #e8a628;
+    --accent-dark: #c98a15;
+    --accent-tint: rgba(232, 166, 40, 0.14);
+
+    --border: rgba(255, 255, 255, 0.1);
+}
+
+
+/* ========================================
+   CONFIGURACIÓN GENERAL
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+section {
+    padding: 110px 8%;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.15;
+    font-family: "Fraunces", serif;
+}
+
+
+/* ========================================
+   HEADER / NAVEGACIÓN
+   ======================================== */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background-color: rgba(12, 13, 19, 0.97);
+
+    border-bottom: 1px solid var(--border);
+
+    backdrop-filter: blur(10px);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    padding: 28px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav > a {
+    color: var(--text);
+
+    font-family: "Fraunces", serif;
+    font-size: 1.7rem;
+    font-weight: 600;
+
+    letter-spacing: -0.5px;
+}
+
+nav ul {
+    display: flex;
+    gap: 32px;
+}
+
+nav ul a {
+    color: var(--text-secondary);
+
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+nav ul a:hover {
+    color: var(--accent);
+}
+
+
+/* ========================================
+   INICIO
+   ======================================== */
+
+#inicio {
+    min-height: 88vh;
+
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 80px;
+
+    background:
+        radial-gradient(
+            circle at 85% 50%,
+            rgba(232, 166, 40, 0.10),
+            transparent 35%
+        );
+}
+
+.inicio-contenido {
+    max-width: 720px;
+}
+
+#inicio h1 {
+    font-size: clamp(3.5rem, 7vw, 6.5rem);
+
+    font-weight: 600;
+
+    letter-spacing: -2px;
+    line-height: 1.02;
+
+    margin-bottom: 20px;
+
+    color: var(--text);
+}
+
+#inicio h2 {
+    font-size: 1.6rem;
+
+    font-weight: 500;
+    font-style: italic;
+
+    color: var(--accent);
+
+    margin-bottom: 30px;
+}
+
+.inicio-descripcion {
+    max-width: 700px;
+
+    color: var(--text-secondary);
+
+    font-size: 1.35rem;
+
+    line-height: 1.8;
+
+    margin-bottom: 40px;
+}
+
+
+/* ========================================
+   BOTONES
+   ======================================== */
+
+.inicio-botones {
+    display: flex;
+
+    gap: 16px;
+
+    flex-wrap: wrap;
+}
+
+.boton-principal,
+.boton-secundario {
+    display: inline-block;
+
+    padding: 16px 30px;
+
+    border-radius: 9px;
+
+    font-size: 1.1rem;
+    font-weight: 700;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.boton-principal {
+    background-color: var(--accent);
+
+    color: var(--bg);
+
+    box-shadow:
+        0 8px 20px rgba(232, 166, 40, 0.25);
+}
+
+.boton-principal:hover {
+    background-color: var(--accent-dark);
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 25px rgba(232, 166, 40, 0.35);
+}
+
+.boton-secundario {
+    border: 2px solid var(--accent);
+
+    color: var(--accent);
+
+    background-color: transparent;
+}
+
+.boton-secundario:hover {
+    background-color: var(--accent-tint);
+
+    transform: translateY(-4px);
+}
+
+
+/* ========================================
+   FOTO
+   ======================================== */
+
+.inicio-foto {
+    flex-shrink: 0;
+
+    position: relative;
+}
+
+.inicio-foto::before {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 420px;
+
+    top: -10px;
+    left: -10px;
+
+    border-radius: 50% 50% 8% 8% / 45% 45% 8% 8%;
+
+    background-color: var(--accent-tint);
+
+    z-index: 0;
+}
+
+.inicio-foto img {
+    position: relative;
+    z-index: 1;
+
+    width: 330px;
+    height: 400px;
+
+    object-fit: cover;
+    object-position: center 25%;
+
+    border-radius: 50% 50% 8% 8% / 45% 45% 8% 8%;
+
+    border: 8px solid var(--bg);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.5);
+
+    filter: saturate(0.92) contrast(1.05);
+}
+
+
+/* ========================================
+   SOBRE MÍ
+   ======================================== */
+
+#sobremi {
+    max-width: none;
+
+    margin: 0;
+
+    background-color: var(--bg-alt);
+}
+
+#sobremi h2 {
+    max-width: 1000px;
+
+    margin: 0 auto 40px;
+
+    font-size: 3.2rem;
+    font-weight: 600;
+
+    color: var(--text);
+}
+
+#sobremi p {
+    max-width: 1000px;
+
+    margin: 0 auto 25px;
+
+    color: var(--text-secondary);
+
+    font-size: 1.3rem;
+
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   HABILIDADES
+   ======================================== */
+
+#habilidades {
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+#habilidades h2 {
+    font-size: 3.2rem;
+    font-weight: 600;
+
+    margin-bottom: 45px;
+
+    color: var(--text);
+}
+
+.habilidades-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.habilidades-grid div {
+    padding: 35px 25px;
+
+    background-color: var(--bg-card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    color: var(--text);
+
+    font-size: 1.25rem;
+
+    font-weight: 700;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.2);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.habilidades-grid div:hover {
+    transform: translateY(-7px);
+
+    background-color: var(--accent-tint);
+
+    border-color: var(--accent);
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ========================================
+   FORMACIÓN
+   ======================================== */
+
+#formacion {
+    max-width: none;
+
+    margin: 0;
+
+    background-color: var(--bg-card);
+
+    color: var(--text);
+}
+
+#formacion h2 {
+    max-width: 1000px;
+
+    margin: 0 auto 40px;
+
+    font-size: 3.2rem;
+    font-weight: 600;
+
+    color: var(--text);
+}
+
+#formacion ul {
+    max-width: 1000px;
+
+    margin: 0 auto;
+}
+
+#formacion li {
+    padding: 25px 28px;
+
+    margin-bottom: 14px;
+
+    border-left: 5px solid var(--accent);
+
+    background-color: rgba(255, 255, 255, 0.03);
+
+    border-radius: 0 9px 9px 0;
+
+    color: var(--text-secondary);
+
+    font-size: 1.25rem;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        padding-left 0.3s ease;
+}
+
+#formacion li:hover {
+    transform: translateX(8px);
+
+    background-color: rgba(255, 255, 255, 0.07);
+
+    padding-left: 35px;
+}
+
+#formacion li strong {
+    color: var(--text);
+}
+
+
+/* ========================================
+   CONTACTO
+   ======================================== */
+
+#contacto {
+    max-width: 1000px;
+
+    margin: 0 auto;
+}
+
+#contacto h2 {
+    font-size: 3.2rem;
+    font-weight: 600;
+
+    margin-bottom: 20px;
+
+    color: var(--text);
+}
+
+#contacto > p {
+    max-width: 700px;
+
+    color: var(--text-secondary);
+
+    font-size: 1.3rem;
+
+    line-height: 1.8;
+
+    margin-bottom: 45px;
+}
+
+form {
+    max-width: 700px;
+}
+
+.campo {
+    display: flex;
+
+    flex-direction: column;
+
+    margin-bottom: 25px;
+}
+
+.campo label {
+    font-weight: 700;
+
+    color: var(--text);
+
+    font-size: 1.15rem;
+
+    margin-bottom: 9px;
+}
+
+.campo input,
+.campo textarea {
+    font-family: inherit;
+
+    font-size: 1.15rem;
+
+    padding: 16px;
+
+    border: 2px solid var(--border);
+
+    border-radius: 9px;
+
+    background-color: var(--bg-card);
+
+    color: var(--text);
+
+    outline: none;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: var(--text-secondary);
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    border-color: var(--accent);
+
+    box-shadow:
+        0 0 0 4px rgba(232, 166, 40, 0.15);
+
+    transform: translateY(-1px);
+}
+
+.campo textarea {
+    resize: vertical;
+}
+
+form button {
+    border: none;
+
+    padding: 16px 30px;
+
+    background-color: var(--accent);
+
+    color: var(--bg);
+
+    border-radius: 9px;
+
+    font-family: inherit;
+
+    font-size: 1.15rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(232, 166, 40, 0.25);
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+form button:hover {
+    background-color: var(--accent-dark);
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 25px rgba(232, 166, 40, 0.35);
+}
+
+.contacto-github {
+    margin-top: 55px;
+
+    padding-top: 30px;
+
+    border-top: 2px solid var(--border);
+}
+
+.contacto-github p {
+    color: var(--text-secondary);
+
+    font-size: 1.15rem;
+
+    margin-bottom: 10px;
+}
+
+.contacto-github a {
+    display: inline-block;
+
+    color: var(--accent);
+
+    font-size: 1.25rem;
+
+    font-weight: 700;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.contacto-github a:hover {
+    color: var(--accent-dark);
+
+    transform: translateX(5px);
+}
+
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+footer {
+    max-width: none;
+
+    margin: 0;
+
+    padding: 40px 8%;
+
+    background-color: var(--bg-header);
+
+    border-top: 1px solid var(--border);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    color: var(--text-secondary);
+
+    font-size: 1.05rem;
+}
+
+footer a {
+    color: var(--accent);
+
+    font-weight: 700;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--text);
+}
+
+
+/* ========================================
+   RESPONSIVE - TABLET
+   ======================================== */
+
+@media (max-width: 1000px) {
+
+    #inicio {
+        gap: 45px;
+    }
+
+    #inicio h1 {
+        font-size: clamp(3.2rem, 7vw, 5rem);
+    }
+
+    .inicio-foto img {
+        width: 260px;
+        height: 320px;
+    }
+
+    .inicio-foto::before {
+        width: 280px;
+        height: 340px;
+    }
+
+    .habilidades-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ========================================
+   RESPONSIVE - CELULAR
+   ======================================== */
+
+@media (max-width: 700px) {
+
+    section {
+        padding: 80px 7%;
+    }
+
+    nav {
+        padding: 16px 7%;
+    }
+
+    nav > a {
+        font-size: 1.2rem;
+    }
+
+    nav ul {
+        gap: 14px;
+    }
+
+    nav ul a {
+        font-size: 1rem;
+    }
+
+    #inicio {
+        min-height: auto;
+
+        padding-top: 80px;
+        padding-bottom: 90px;
+
+        flex-direction: column-reverse;
+
+        align-items: flex-start;
+
+        gap: 50px;
+    }
+
+    .inicio-foto {
+        align-self: center;
+    }
+
+    .inicio-foto img {
+        width: 230px;
+        height: 290px;
+    }
+
+    .inicio-foto::before {
+        width: 250px;
+        height: 310px;
+
+        top: -10px;
+        left: -10px;
+    }
+
+    #inicio h1 {
+        font-size: 3.3rem;
+
+        letter-spacing: -1px;
+    }
+
+    #inicio h2 {
+        font-size: 1.4rem;
+    }
+
+    .inicio-descripcion {
+        font-size: 1.15rem;
+    }
+
+    #sobremi h2,
+    #habilidades h2,
+    #formacion h2,
+    #contacto h2 {
+        font-size: 2.6rem;
+    }
+
+    #sobremi p {
+        font-size: 1.15rem;
+    }
+
+    .habilidades-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .habilidades-grid div {
+        padding: 28px 20px;
+    }
+
+    #formacion li {
+        font-size: 1.05rem;
+    }
+
+    #contacto > p {
+        font-size: 1.15rem;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+    }
+}
+
+
+/* ========================================
+   RESPONSIVE - CELULAR PEQUEÑO
+   ======================================== */
+
+@media (max-width: 450px) {
+
+    nav {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    #inicio h1 {
+        font-size: 2.8rem;
+    }
+
+    #inicio h2 {
+        font-size: 1.25rem;
+    }
+
+    .inicio-botones {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .boton-principal,
+    .boton-secundario {
+        text-align: center;
+    }
+
+    .inicio-foto img {
+        width: 200px;
+        height: 260px;
+    }
+
+    .inicio-foto::before {
+        width: 220px;
+        height: 280px;
+    }
+
+    #sobremi h2,
+    #habilidades h2,
+    #formacion h2,
+    #contacto h2 {
+        font-size: 2.3rem;
+    }
+}
